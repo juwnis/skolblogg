@@ -6,3 +6,7 @@ Version: 1.0
 License: WTFPL
 Text Domain: skolblogg
 */
+
+.customize-support .navbar {
+	top:32px;
+}
