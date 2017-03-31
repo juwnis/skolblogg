@@ -1,4 +1,5 @@
 <?php
+
 function skolblogg_setup() {
 
     //Visa bara admin-bar om den inloggade användaren får redigera sidor.
@@ -15,8 +16,8 @@ function skolblogg_widgets_init() {
     register_sidebar( array(
         'name'          => 'Sidebar Area',
         'id'            => 'sidebar_area',
-        'before_widget' => '<li class="list-inline-item">',
-        'after_widget'  => '</li>',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
         'before_title'  => '<h2>',
         'after_title'   => '</h2>',
     ) );

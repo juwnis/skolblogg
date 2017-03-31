@@ -10,3 +10,7 @@ Text Domain: skolblogg
 .customize-support .navbar {
 	top:32px;
 }
+.page {
+	margin-top:70px;
+	padding-top:25px;
+}

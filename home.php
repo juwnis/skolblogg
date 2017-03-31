@@ -10,19 +10,26 @@
     </p>
   </div>
 </section>
-<hr>
+
 <div class="container">
   <div class="row">
+
     <?php
     get_sidebar();
     ?>
-      <div class="col-lg-9">
-          <h1>The Title</h1>
-          <p>
-            You Are on Index page
-          </p>
-        </div>
-      </div>
-    </div>
-
-<?php get_footer(); ?>
+    <div class="col-lg-9">
+     <?php
+     if ( have_posts() ) : while ( have_posts() ) : the_post();
+     ?>
+     <h1><?php the_title(); ?></h1>
+     <?php
+     the_excerpt();
+     endwhile;
+     wp_reset_postdata();
+     else :
+      _e( 'Sorry, no posts matched your criteria.', 'skolblogg' );
+    endif; 
+    ?>
+  </div>
+</div>
+<?php get_footer(); ?>   
