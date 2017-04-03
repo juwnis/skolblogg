@@ -1,5 +1,5 @@
 <?php
-//register navwalker class
+// Register Custom Navigation Walker
 require_once('wp-bootstrap-navwalker.php');
 
 function skolblogg_setup() {
@@ -11,10 +11,30 @@ function skolblogg_setup() {
         else{
             show_admin_bar(false);
         }
-        register_nav_menus(array(
-            'primary' => __('Primary Menu')
-            ));
-}
+    //Registrera våra menyer.
+    register_nav_menus(
+        array(
+            'header-menu' => __( 'Navbar menu' )
+        )
+    );
+    // Sidlogo
+    add_theme_support( 'custom-logo', array(
+    'height'      => 100,
+    'width'       => 100,
+    'flex-height' => false,
+    'flex-width'  => false,
+    'header-text' => array( 'site-title', 'site-description' ),
+) );
+    $args = array(
+    'flex-width'    => true,
+    'width'         => 980,
+    'flex-height'   => true,
+    'height'        => 200,
+    'default-image' => get_template_directory_uri() . '/images/header.jpg',
+);
+add_theme_support( 'custom-header', $args );
+    }
+     
 add_action('after_setup_theme', 'skolblogg_setup');
 function skolblogg_widgets_init() {
 
@@ -40,9 +60,8 @@ add_action( 'widgets_init', 'skolblogg_widgets_init' );
 function add_theme_scripts() {
     wp_enqueue_style( 'skolblogg-bootstrap4', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', '4.0.0-alpha.6' );
 
-    wp_enqueue_style( 'skolblogg-jumbotron', get_template_directory_uri() . '/css/jumbotron.css', array('skolblogg-bootstrap4'), '2017032801');
 
-    wp_enqueue_style( 'skolblogg-style', get_template_directory_uri() . '/style.css', array('skolblogg-bootstrap4', 'skolblogg-jumbotron'), '2017032801');
+    wp_enqueue_style( 'skolblogg-style', get_template_directory_uri() . '/style.css', array('skolblogg-bootstrap4'), '2017032801');
 
     wp_deregister_script( 'jquery' );
     wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.1.1.slim.min.js', array(), '3.1.1', true);
@@ -56,4 +75,5 @@ function add_theme_scripts() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
+
 ?>

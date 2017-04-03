@@ -6,22 +6,38 @@ Version: 1.0
 License: WTFPL
 Text Domain: skolblogg
 */
-
-.customize-support .navbar {
+.customize-support .fixed-top {
 	top:32px;
 }
+.jumbotron {
+	margin-top:116px;
+	padding-top:25px;
+}
 .page {
-	margin-top:70px;
+	margin-top:116px;
 	padding-top:25px;
 }
 .category {
-	margin-top:70px;
+	margin-top:116px;
 	padding-top:25px;
 }
 .single {
-	margin-top:70px;
+	margin-top:116px;
 	padding-top:25px;
 }
 .site-footer {
 	border: 1px solid black;
+}
+.navbar .dropdown-menu li {
+    width: 100%;
+    margin-left: 0 !important;
+}
+.navbar ul {
+	margin-left: auto;
+}
+.header-text {
+	margin-top: auto;
+}
+.navbar-brand {
+	margin-left: 10px;
 }
