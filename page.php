@@ -7,7 +7,7 @@ get_header();
     <?php
             get_sidebar();
             ?>
-        <div class="col-md-8">
+        <div class="col-md-9">
             <h6>Page</h6>
             <?php
 

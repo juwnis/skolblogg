@@ -1,6 +1,14 @@
     <!-- Site footer -->
-    <footer class="footer">
-      <p>&copy; Company 2017</p>
+    <footer class="site-footer">
+     <div class="container">
+        <div class="row">
+            <ul class="list-inline col-md-12">
+               
+                <?php dynamic_sidebar( 'footer_area' ); ?>
+               
+            </ul>
+        </div> <!-- /row -->
+    </div><!-- /container -->
       <?php
       wp_footer();
       ?>

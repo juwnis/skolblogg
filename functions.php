@@ -1,4 +1,6 @@
 <?php
+//register navwalker class
+require_once('wp-bootstrap-navwalker.php');
 
 function skolblogg_setup() {
 
@@ -9,6 +11,9 @@ function skolblogg_setup() {
         else{
             show_admin_bar(false);
         }
+        register_nav_menus(array(
+            'primary' => __('Primary Menu')
+            ));
 }
 add_action('after_setup_theme', 'skolblogg_setup');
 function skolblogg_widgets_init() {
@@ -21,13 +26,21 @@ function skolblogg_widgets_init() {
         'before_title'  => '<h2>',
         'after_title'   => '</h2>',
     ) );
+        register_sidebar( array(
+        'name'          => 'Footer Area',
+        'id'            => 'footer_area',
+        'before_widget' => '<li class="list-inline-item">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>',
+    ) );
 }
 add_action( 'widgets_init', 'skolblogg_widgets_init' );
 
 function add_theme_scripts() {
     wp_enqueue_style( 'skolblogg-bootstrap4', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', '4.0.0-alpha.6' );
 
-    wp_enqueue_style( 'skolblogg-jumbotron', get_template_directory_uri() . '/jumbotron.css', array('skolblogg-bootstrap4'), '2017032801');
+    wp_enqueue_style( 'skolblogg-jumbotron', get_template_directory_uri() . '/css/jumbotron.css', array('skolblogg-bootstrap4'), '2017032801');
 
     wp_enqueue_style( 'skolblogg-style', get_template_directory_uri() . '/style.css', array('skolblogg-bootstrap4', 'skolblogg-jumbotron'), '2017032801');
 
