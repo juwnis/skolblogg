@@ -18,7 +18,7 @@ get_header();
 				
 				endwhile;
 				else :
-					_e( 'Sorry, no posts matched your criteria.', 'elefantbajs2000' );
+					_e( 'Sorry, no posts matched your criteria.', 'skolblogg' );
 				endif;
 				?>
 				<hr>

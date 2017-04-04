@@ -9,7 +9,7 @@ get_header();
 			</div>
 			<div class="col-md-9">
 
-				<h1 class="text-underline"><?php single_cat_title(); ?></h1>
+				<h1 class="text-underline"><?php echo post_type_archive_title("Shitstorm");?></h1>
 				<div class="container">
 					<div class="row">
 				<?php
@@ -18,7 +18,7 @@ get_header();
 					<div class="col-md-5 cat-excerpt">
 					<h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"> <?php the_title(); ?> </a></h2>
 					<div class="post-meta">
-						Author: <?php the_author(); ?> | Created: <?php the_date(); ?>
+						Author: <?php the_author(); ?>
 					</div>
 					<?php
 					the_excerpt();

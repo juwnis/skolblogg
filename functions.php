@@ -25,13 +25,16 @@ function skolblogg_setup() {
     'flex-width'  => false,
     'header-text' => array( 'site-title', 'site-description' ),
 ) );
+
+    // Header image + text
     $args = array(
-    'flex-width'    => true,
-    'width'         => 980,
+    'flex-width'    => false,
+    'width'         => 1140,
     'flex-height'   => true,
-    'height'        => 200,
-    'default-image' => get_template_directory_uri() . '/images/header.jpg',
-);
+    'height'        => 300,
+    'header-text'   => true,
+    'default-text-color'     => '#fff',
+    );
 add_theme_support( 'custom-header', $args );
     }
      
@@ -56,6 +59,20 @@ function skolblogg_widgets_init() {
     ) );
 }
 add_action( 'widgets_init', 'skolblogg_widgets_init' );
+
+// Read more button
+function wpdocs_excerpt_more( $more ) {
+    return sprintf( '...<br/><a class="read-more btn btn-info btn-sm" href="%1$s">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( 'Läs mer', 'textdomain' )
+    );
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+// Custom excerpt lenght
+function wpdocs_custom_excerpt_length( $length ) {
+    return 40;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 function add_theme_scripts() {
     wp_enqueue_style( 'skolblogg-bootstrap4', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', '4.0.0-alpha.6' );

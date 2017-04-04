@@ -1,13 +1,15 @@
 <?php get_header(); ?>
 
-<section class="jumbotron text-center">
+<section class="jumbotron">
   <div class="container">
-    <h1 class="jumbotron-heading">Album example</h1>
-    <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-    <p>
-      <a href="#" class="btn btn-primary">Main call to action</a>
-      <a href="#" class="btn btn-secondary">Secondary action</a>
-    </p>
+  <?php if ( get_header_image() ) { ?>
+    <div id="site-header">
+            <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+    </div>
+<?php }
+  else {
+    echo "<p>Here goes the image</p>";
+    } ?>
   </div>
 </section>
 <hr>

@@ -9,20 +9,23 @@ Text Domain: skolblogg
 .customize-support .fixed-top {
 	top:32px;
 }
-.jumbotron {
+body {
 	margin-top:116px;
-	padding-top:25px;
+}
+.jumbotron .container-fluid img {
+	margin-left: auto;
+}
+
+.jumbotron {
+	padding-top: 5px;
 }
 .page {
-	margin-top:116px;
 	padding-top:25px;
 }
 .category {
-	margin-top:116px;
 	padding-top:25px;
 }
 .single {
-	margin-top:116px;
 	padding-top:25px;
 }
 .site-footer {
@@ -40,4 +43,8 @@ Text Domain: skolblogg
 }
 .navbar-brand {
 	margin-left: 10px;
+}
+.cat-excerpt {
+	border: 1px solid black;
+	margin: 5px;
 }
