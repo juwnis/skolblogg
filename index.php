@@ -21,7 +21,7 @@
       <div class="col-lg-9">
           <h1>The Title</h1>
           <p>
-            You Are on Index page
+            Something went wrong...
           </p>
         </div>
       </div>

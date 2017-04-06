@@ -15,9 +15,8 @@
 <body>
 
   <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    
+    <div class="logo">
     <?php
 
       if ( function_exists( 'the_custom_logo' ) ) {
@@ -25,7 +24,13 @@
       }
  
     ?>
-    <a class="navbar-brand header-text" href="#"><?php bloginfo('name'); ?></a>
+    </div> <!-- logo -->
+    <div class="blog-title">
+    <h3><?php echo bloginfo('name'); ?></h3>
+    </div><!-- blog-title -->
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <?php
     wp_nav_menu( array(
       'theme_location'    => 'header-menu',

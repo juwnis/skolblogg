@@ -6,19 +6,18 @@ Version: 1.0
 License: WTFPL
 Text Domain: skolblogg
 */
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
 .customize-support .fixed-top {
 	top:32px;
 }
 body {
 	margin-top:116px;
+	font-family: 'Catamaran', sans-serif;
 }
-.jumbotron .container-fluid img {
+.container-fluid img {
 	margin-left: auto;
 }
 
-.jumbotron {
-	padding-top: 5px;
-}
 .page {
 	padding-top:25px;
 }
@@ -35,8 +34,10 @@ body {
     width: 100%;
     margin-left: 0 !important;
 }
+
 .navbar ul {
 	margin-left: auto;
+	margin-right: 80px;
 }
 .header-text {
 	margin-top: auto;
@@ -46,5 +47,28 @@ body {
 }
 .cat-excerpt {
 	border: 1px solid black;
-	margin: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 10px;
+}
+#site-header {
+	width:1140px;
+	height: 300px;
+	text-align: center;
+	text-shadow: 2px 1px 16px rgba(0, 0, 0, 1);
+
+}
+#site-header h1 {
+	line-height: 300px;
+}
+.blog-title {
+	color:white;
+	margin: 10px;
+	position: absolute;
+    left: 120;
+    top: 35;
+}
+.logo {
+	width: 100px;
+	height: 100px;
 }

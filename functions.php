@@ -1,6 +1,7 @@
 <?php
 // Register Custom Navigation Walker
 require_once('wp-bootstrap-navwalker.php');
+require_once('customize.php');
 
 function skolblogg_setup() {
 
@@ -26,7 +27,7 @@ function skolblogg_setup() {
     'header-text' => array( 'site-title', 'site-description' ),
 ) );
 
-    // Header image + text
+    // Header image
     $args = array(
     'flex-width'    => false,
     'width'         => 1140,
@@ -77,7 +78,7 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 function add_theme_scripts() {
     wp_enqueue_style( 'skolblogg-bootstrap4', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', '4.0.0-alpha.6' );
 
-
+    
     wp_enqueue_style( 'skolblogg-style', get_template_directory_uri() . '/style.css', array('skolblogg-bootstrap4'), '2017032801');
 
     wp_deregister_script( 'jquery' );

@@ -22,8 +22,11 @@ get_header();
 				endif;
 				?>
 				<hr>
-				<?php 
-			$popular_posts = new WP_Query('post_type=post&posts_per_page=3');
+				<?php
+				// Get latest posts and exclude current post
+				$post_id = get_queried_object_id();
+				$exclude = array($post_id);
+			$popular_posts = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 3, 'post__not_in' => $exclude));
 			if ($popular_posts->have_posts()){
 				?>
 				<div class="row">
