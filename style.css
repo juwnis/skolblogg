@@ -28,7 +28,7 @@ body {
 	padding-top:25px;
 }
 .site-footer {
-	border: 1px solid black;
+	
 }
 .navbar .dropdown-menu li {
     width: 100%;
@@ -71,4 +71,7 @@ body {
 .logo {
 	width: 100px;
 	height: 100px;
+}
+.post-title {
+	margin-top: 10px;
 }

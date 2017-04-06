@@ -1,4 +1,5 @@
 <?php
+// Header text till customizer
 function yourprofile_customize ( $wp_customize ) {
     //Header Showcase section
     $wp_customize->add_section('showcase', array(

@@ -4,11 +4,11 @@ get_header();
 
 <div class="container page">
     <div class="row">
-    <?php
-            get_sidebar();
-            ?>
+        <?php
+        get_sidebar();
+        ?>
         <div class="col-md-9">
-            <h6>Page</h6>
+         
             <?php
 
             if ( have_posts() ) : while ( have_posts() ) : the_post();

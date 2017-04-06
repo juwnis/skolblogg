@@ -2,15 +2,15 @@
 /*
 Template Name: Fullwidth Page
 */
-    get_header();
+get_header();
 ?>
 <div class="container-fluid page">
     <div class="row">
-    <?php
-            get_sidebar();
-            ?>
+        <?php
+        get_sidebar();
+        ?>
         <div class="col-md-9">
-            <h6>Page</h6>
+         
             <?php
 
             if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -30,7 +30,7 @@ Template Name: Fullwidth Page
 
     </div><!-- /row -->
 </div><!-- /container -->
-        <?php
+<?php
 get_footer();
 ?>
 

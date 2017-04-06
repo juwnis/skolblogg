@@ -2,12 +2,12 @@
 /*
 Template Name: No Sidebar Page
 */
-    get_header();
+get_header();
 ?>
 <div class="container page">
     <div class="row">
         <div class="col-md-12">
-            <h6>Page</h6>
+            
             <?php
 
             if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -24,6 +24,6 @@ Template Name: No Sidebar Page
         </div><!-- /col-md-12 -->
     </div><!-- /row -->
 </div><!-- /container -->
-        <?php
+<?php
 get_footer();
 ?>
